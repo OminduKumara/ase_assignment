@@ -16,6 +16,15 @@ Description: Load/Performance Testing (K6), data-driven login payload testing us
 
 ## Test Result Evidence
 
+Student 1 result images:
+
+<table>
+   <tr>
+      <td><img src="testresults/IT23645684%20-%20E2E_crossbrowser.png" alt="IT23645684 Cross Browser E2E Result" width="420" /></td>
+      <td><img src="testresults/IT23645684_Test_Results.png" alt="IT23645684 Playwright Test Summary" width="420" /></td>
+   </tr>
+</table>
+
 Student 2 result images:
 
 <table>
