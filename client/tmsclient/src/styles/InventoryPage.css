@@ -1,0 +1,325 @@
+/* ============================================================
+   InventoryPage.css - "University Premium Light" Theme
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --inv-bg: #e2e8f0; /* SLIIT Dashboard Slate-200 for High Contrast */
+  --inv-card: #ffffff;
+  --inv-navy: #000040;
+  --inv-orange: #FF5C00;
+  --inv-text: #000040;
+  --inv-border: #cbd5e1;
+}
+
+.inventory-dashboard {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--inv-bg);
+  min-height: 100vh;
+  padding: 40px;
+  color: var(--inv-text);
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.inventory-header h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: var(--inv-navy);
+}
+
+.inventory-header-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.add-item-bar {
+  display: flex;
+  gap: 12px;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: 1.5px solid var(--inv-border);
+  box-shadow: 0 4px 15px rgba(0, 0, 64, 0.05);
+}
+
+.inv-input {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  color: var(--inv-navy);
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.inv-input:focus {
+  border-color: var(--inv-orange);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(255, 92, 0, 0.1);
+}
+
+.inv-btn-primary {
+  background: var(--inv-orange);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.inv-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 92, 0, 0.3);
+}
+
+.inv-btn-report {
+  background: var(--inv-navy);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.inv-btn-report:hover {
+  background: #000060;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 64, 0.2);
+}
+
+/* ── Grid Layouts ── */
+.inv-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.logs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ── Premium Card System ── */
+.inv-card {
+  background: white;
+  border: 1.5px solid var(--inv-border);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 25px rgba(0, 0, 40, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.inv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--inv-navy);
+}
+
+.inv-card h3 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--inv-navy);
+  margin-bottom: 24px;
+}
+
+/* ── Available Assets Table (HEART OF THE REQUEST) ── */
+.inv-table-container {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 2px solid #f1f5f9;
+  background: white; /* Force White Background */
+}
+
+.inv-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.inv-table th {
+  background: var(--inv-navy); /* Authoritative Navy Header */
+  color: white;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: sticky;
+  top: 0;
+}
+
+.inv-table td {
+  padding: 18px 20px;
+  border-bottom: 1.5px solid #f1f5f9;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--inv-navy);
+}
+
+.inv-table tr:hover td {
+  background: #fdfdfd;
+}
+
+.inv-table tr.selected-row td {
+  background: #f0f7ff;
+  border-bottom-color: #cbd5e1;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── Individual Scrollable Containers ── */
+.scrollable-inv-card {
+  height: 480px; /* Rigid Height for Individual Scrollability */
+  overflow-y: auto;
+  padding-right: 12px;
+}
+
+.scrollable-inv-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-inv-card::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.scrollable-inv-card::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
+}
+
+.scrollable-inv-card::-webkit-scrollbar-thumb:hover {
+  background: var(--inv-navy);
+}
+
+/* ── Action Forms ── */
+.action-form {
+  background: #f8fafc;
+  padding: 24px;
+  border-radius: 20px;
+  border: 2px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.action-form-title {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--inv-navy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── Transaction Items ── */
+.tx-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tx-item {
+  background: white;
+  border: 1.5px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.tx-item:hover {
+  border-color: var(--inv-orange);
+  transform: translateX(4px);
+}
+
+.tx-text strong {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--inv-navy);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tx-meta {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.tx-player {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--inv-navy);
+}
+
+.tx-player-badge {
+  background: #e2e8f0;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+.inv-btn-action {
+  background: #f1f5f9;
+  color: var(--inv-navy);
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.inv-btn-action:hover {
+  background: var(--inv-navy);
+  color: white;
+}
+
+@media (max-width: 1400px) {
+  .logs-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 1000px) {
+  .inv-grid { grid-template-columns: 1fr; }
+  .logs-grid { grid-template-columns: 1fr; }
+}
