@@ -3,7 +3,7 @@
 ## Group Members and Responsibilities
 
 ### Student 1 - IT23645684 - V.N. Jayasinghe
-Description: Unit/Component Testing (Playwright), parameterized test scenarios.
+Description: Unit/Component Testing (Playwright), configuring cross-browser E2E execution across Chromium, Firefox, and WebKit, with parallel runs and headed/headless mode toggles.
 
 ### Student 2 - IT23575608 - H.W. Ranwala
 Description: Unit/Component Testing (PLaywright), fixtures and mocking for component/service behavior.
