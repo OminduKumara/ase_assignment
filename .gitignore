@@ -9,9 +9,9 @@ playwright-report/
 coverage/
 .nyc_output/
 
-**/*.spec.*
+# **/*.spec.*
 
-playwright.config.js
+# playwright.config.js
 generate-excel-reports.cjs
 debug.cjs
 
