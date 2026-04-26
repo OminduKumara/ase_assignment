@@ -6,7 +6,7 @@
 Description: Unit/Component Testing (Playwright), configuring cross-browser E2E execution across Chromium, Firefox, and WebKit, with parallel runs and headed/headless mode toggles.
 
 ### Student 2 - IT23575608 - H.W. Ranwala
-Description: Unit/Component Testing (PLaywright), fixtures and mocking for component/service behavior.
+Description: Unit/Component Testing (Playwright), fixtures and mocking for component/service behavior.
 
 ### Student 3 - IT23750210 - K.H.G.A. Udaneth
 Description: Load/Performance Testing (K6), spike and stress test configuration/execution.
